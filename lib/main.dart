@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 
+import 'l10n/localizations.dart';
 import 'locator.dart';
 import 'res/style/app_colors.dart';
 import 'services/shared_pref_service.dart';
@@ -45,6 +46,7 @@ class MyApp extends StatelessWidget {
       navigatorObservers: [routeObserver],
       initialRoute: RoutesName.splash,
       onGenerateRoute: Routes.routeBuilder,
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
     );
   }
 }
